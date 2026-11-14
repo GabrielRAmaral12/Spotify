@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+}
+
+h1, h2, h3, h4{
+    color: #fff;
+}
+
+
+/*ESTILIZAÇÃO DO HEADER*/
+header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    
+}
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+    border-radius: 50px;
+    background-color: #212121;
+    filter: brightness(100%);
+    transition: all 0.5s ease;
+
+    &:hover{
+        filter: brightness(130%);
+    }
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+    filter: brightness(100%);
+    transition: all 0.3s ease;
+
+    &:hover{
+        filter: brightness(130%);
+    }
+}
+
+.fa-spotify, .fa-house, .fa-magnifying-glass{
+    width: 2rem;
+    height: 2.5rem;
+    color: #fff;
+}
+
+.fa-house{
+    transition: all 0.5s ease;
+
+    &:hover{
+    color: #b3b3b3;
+    }
+}
+
+.fa-magnifying-glass{
+    position: relative;
+    left: 2.5rem;
+}
+
+.fa-download{
+    margin-right: 0.2rem;
+    color: #fff;
+}
+
+input[type="search"]{
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    background-color: #212121;
+    color: #fff;
+}
+
+.nav-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+#nav-header-premium, #nav-header-support, #nav-header-download, #nav-header-subscripe{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: all 0.3s ease;
+
+    &:hover{
+        color: #fff;
+    }
+}
+
+#btn-login{
+    width: 7rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #121212;
+    transition: 0.5s ease;
+
+    &:hover{
+        background-color: #e3e3e3;
+    }
+}
+
+
+/*ESTILIZAÇÃO DA ASIDE*/
+
+.content{
+    display: flex;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 100vh;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    gap: 1.2rem;
+    border-radius: 13px;
+    background-color: #121212;
+}
+
+.library{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    gap: 10rem;
+}
+
+
+.library h1, .playlist h2, .podcast h2{
+    font-size: 1.1rem;
+}
+
+#btn-create{
+    width: 5.5rem;
+    height: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #212121;
+    filter: brightness(100%);
+
+    &:hover{
+        filter: brightness(130%);
+    }
+}
+
+.playlist, .podcast{
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 13px;
+    background-color: #212121;
+}
+
+.playlist p, .podcast p{
+    color: #fff;
+}
+
+#btn-playlist{
+    width: 7rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #e3e3e3;
+    }
+}
+
+#btn-podcast{
+    width: 9rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #e3e3e3;
+    }
+}
+
+.menu-bottom{
+    display: flex;
+    justify-content: center;
+    line-height: 1rem;
+    flex-wrap: wrap;
+}
+
+#menu-bottom-legal, #menu-bottom-security, #menu-bottom-privacy, #menu-bottom-cookies, #menu-bottom-advertisements, #menu-bottom-accessibility{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #b3b3b3;
+
+    &:hover{
+        color: #fff;
+    }
+}
+
+#language{
+    width: 10rem;
+    height: 2rem;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    border: 1px solid #b3b3b3;
+    border-radius: 15px;
+    background-color: #121212;
+    color: #fff;
+
+    &:hover{
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+}
+
+
+/*ESTILIZAÇÃO DO MAIN*/
+main{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 100vh;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    border-radius: 15px;
+    background-color: #212121;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    overflow-y: auto;
+}
+
+.trending, .popular-artists, .popular-albums{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 1rem 0.5rem 0.5rem;
+}
+
+#trending-link, #popular-artists-link, #popular-albums-link{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #b3b3b3;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+#show-all-trending, #show-all-popular-artists, #show-all-popular-albums{
+    text-align: center; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #b3b3b3;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.trending-grid, .artists-grid, .albums-grid{
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 0.5rem;
+    gap: 0.5rem;
+}
+
+.trending-cards, .artists-cards, .albums-cards{
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 15px;
+    background-color: #181818;
+    filter: brightness(100%);
+    transition: all 0.2s ease;
+
+    &:hover{
+        background-color: #202020;
+        filter: brightness(130%);
+        cursor: pointer;
+    }
+}
+
+.trending-cards img, .artists-cards img, .albums-cards img{
+    width: 10rem;
+    border-radius: 10px;
+}
+
+.trending-cards h3, .artists-cards h3, .albums-cards h3{
+    text-align: center;
+    font-size: 1rem;
+    flex-wrap: wrap;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.trending-cards p, .artists-cards p, .albums-cards p{
+    text-align: center;
+    font-weight: bold;
+    color: #b3b3b3;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+/*ESTILIZAÇÃO DO FOOTER*/
+footer{
+    margin-top: 5rem;
+    border-top: 1px solid #b3b3b3;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-right: 1.5rem;
+    gap: 1.5rem;
+    line-height: 2rem;
+}
+
+.footer-links li{
+    list-style-type: none;
+}
+
+.footer-links h4{
+    font-size: 1.1rem;
+}
+
+.company a, .community a, .useful-links a, .spotify-plans a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: 0.3s ease;
+
+    &:hover{
+        color: #fff;
+    }
+
+}
+
+.media-icons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.fa-instagram, .fa-x-twitter, .fa-facebook-f{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #121212;
+    color: #fff;
+    filter: brightness(100%);
+
+    &:hover{
+        filter: brightness(150%);
+    }
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+    border-top: 1px solid #b3b3b3;
+}
+
+.copyright p{
+    font-weight: bold;
+    color: #b3b3b3;
+}
+
+.fa-copyright{
+    height: 1rem;
+    color: #b3b3b3;
+}
+
+.copyright p, .copyright i{
+    margin-right: 3.5rem;
+    padding: 2px;
+}
+
+#banner{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100vw;
+    height: 12vh;
+    border: 5px solid black;
+    border-radius: 10px;
+    bottom: 0;
+    cursor: pointer;
+    background: linear-gradient(90deg, #AF2896, #509bf5);
+}
+
+#banner p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+#btn-banner{
+    width: 13rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #e3e3e3;
+    }
+}
